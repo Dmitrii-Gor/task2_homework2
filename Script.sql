@@ -1,5 +1,5 @@
 create table if not exists Genre (
-	id SERIAL PRIMARY KEY,
+	id INTEGER PRIMARY KEY,
 	name VARCHAR(40) not null
 );
 create table if not exists Musician (
