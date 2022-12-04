@@ -20,7 +20,7 @@ insert into album
 values (100,'Албом Daft Punk', 1978),
 (101,'Альбом Emninem_1', 2005), 
 (102,'Альбом Rammstein', 1991),
-(103,'Альбом Eminem_2', 2018),
+(103,'Альбом Eminem_2', 2019),
 (104,'Альбом Linkin Park', 2004), 
 (105,'Альбом JONY', 2010), 
 (106,'Альбом Kanye West', 2003),
@@ -100,4 +100,17 @@ values (1, 17),
 (8, 31);
 
 
+update Collection
+set name = 'Finally Linkin Park'
+where ID = 8
 
+insert into genre_relation (genre_id, musician_id)
+values(1,31)
+
+UPDATE colletion_track_relation 
+SET track_id = 22
+WHERE id = 20;
+
+UPDATE colletion_track_relation 
+SET track_id = 22
+WHERE id = 14;
