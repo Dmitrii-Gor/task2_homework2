@@ -22,7 +22,12 @@ join album on album_relation.album_id = album.id
 where (album.year_of_issue = 2020))
 
 select collection.name from collection
-where name like '%Linkin Park%'
+join colletion_track_relation on collection.id = colletion_track_relation.collection_id
+join track on track.id = colletion_track_relation.track_id 
+join album on album.id = track.album_id
+join album_relation on album.id = album_relation.album_id 
+join musician on musician.id = album_relation.musician_id
+where musician.name like '%Rammstein%'
 
 select album.name from musician 
 join genre_relation on musician.id = genre_relation.musician_id
